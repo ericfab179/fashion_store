@@ -1,31 +1,22 @@
-echo "running dbserver_setup.sh"
-
-echo "apt-get update"
 apt-get update
 
-echo "export MYSQL_PWD='admin'"
-export MYSQL_PWD='admin'
+export MYSQL_PWD='insecure_mysqlroot_pw'
 
 echo "mysql-server mysql-server/root_password password $MYSQL_PWD" | debconf-set-selections 
 echo "mysql-server mysql-server/root_password_again password $MYSQL_PWD" | debconf-set-selections
 
-echo "apt-get -y install mysql-server"
 apt-get -y install mysql-server
 
-echo "CREATE DATABASE admindb;" | mysql
+echo "CREATE DATABASE fvision;" | mysql
 
-echo "CREATE USER 'webuser'@'%' IDENTIFIED BY 'password';" | mysql
+echo "CREATE USER 'webuser'@'%' IDENTIFIED BY 'insecure_db_pw';" | mysql
 
 echo "GRANT ALL PRIVILEGES ON fvision.* TO 'webuser'@'%'" | mysql
 
-echo "export MYSQL_PWD='password'"
-export MYSQL_PWD='password'
+export MYSQL_PWD='insecure_db_pw'
 
-echo "cat /vagrant/database_setup.sql | mysql -u webuser admin"
-cat /vagrant/setup/database_setup.sql | mysql -u webuser admin
+cat /vagrant/setup/database_setup.sql | mysql -u webuser fvision
 
-echo "sed -i'' -e '/bind-address/s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf"
 sed -i'' -e '/bind-address/s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
-echo "service mysql restart"
 service mysql restart
