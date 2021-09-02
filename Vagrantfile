@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
 		userserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
-		userserver.vm.provision :shell, path: "userserver_setup.sh"
+		userserver.vm.provision :shell, path: "setup/userserver_setup.sh"
 
 	end
 
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 
 		adminserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
-		adminserver.vm.provision :shell, path: "adminserver_setup.sh"
+		adminserver.vm.provision :shell, path: "setup/adminserver_setup.sh"
 
 	end
 
@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
 
 		dbserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
-		dbserver.vm.provision :shell, path: "dbserver_setup.sh"
+		dbserver.vm.provision :shell, path: "setup/dbserver_setup.sh"
 
 	end
 

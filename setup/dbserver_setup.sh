@@ -22,7 +22,7 @@ echo "export MYSQL_PWD='password'"
 export MYSQL_PWD='password'
 
 echo "cat /vagrant/database_setup.sql | mysql -u webuser admin"
-cat /vagrant/database_setup.sql | mysql -u webuser admin
+cat /vagrant/setup/database_setup.sql | mysql -u webuser admin
 
 echo "sed -i'' -e '/bind-address/s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf"
 sed -i'' -e '/bind-address/s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
