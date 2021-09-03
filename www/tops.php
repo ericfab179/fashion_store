@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
     <head>
-        <title>HUNTER</title>
+        <title>HUNTER -> tops</title>
         <meta charset="utf-8">
         <link rel="icon" href="icon.png">
         <link rel="stylesheet" href="style.css"/>
@@ -21,7 +21,7 @@
             </nav>
         </header>
         <main>
-            <p>Showing contents of products table:</p>
+            <p>Showing all tops in the products table</p>
             <table border="1">
                 <tr>
                     <th>product_id</th>
@@ -38,7 +38,7 @@
                     $db_passwd = 'insecure_db_pw';
                     $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
                     $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
-                    $q = $pdo->query("SELECT * FROM products");
+                    $q = $pdo->query("SELECT * FROM products WHERE product_category='tops'");
                     while($row = $q->fetch()){
                         echo "<tr>";
                         echo "<td>".$row["product_id"]."</td>";
