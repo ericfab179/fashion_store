@@ -1,24 +1,25 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html>
-<head><title>Database test page</title>
-<style>
-th { text-align: left; }
+<html lang="en">
+    <head>
+        <title>HUNTER</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="logo.png" alt="pawhub"> 
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">about us</a></li>
+                    <li><a href="bookings.html">bookings</a></li>
+                    <li><a href="points_of_interest.html">points of interest</a></li>
+                </ul>
+            </nav>
+        </header>
 
-table, th, td {
-  border: 2px solid grey;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 0.2em;
-}
-</style>
-</head>
-
-<body>
-<h1>Database testsss page</h1>
-
-<p>Showing contents of papers table:</p>
+<p>Showing contents of products table:</p>
 
 <table border="1">
 <tr>
@@ -41,7 +42,7 @@ $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
 $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 
-$q = $pdo->query("SELECT * FROM PRODUCTS");
+$q = $pdo->query("SELECT * FROM products");
 
 while($row = $q->fetch()){
     echo "<tr>";
