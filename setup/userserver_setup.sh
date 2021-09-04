@@ -6,7 +6,7 @@ apt-get update
 echo "apt-get install -y apache2 php libapache2-mod-php php-mysql"
 apt-get install -y apache2 php libapache2-mod-php php-mysql
 
-echo "cp /vagrant/test-website.conf /etc/apache2/sites-available/"
+echo "cp /vagrant/user-site.conf /etc/apache2/sites-available/"
 cp /vagrant/setup/user-site.conf /etc/apache2/sites-available/
 
 echo "a2ensite test-website"

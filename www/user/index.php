@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <link rel="icon" href="icon.png">
         <link rel="stylesheet" href="style.css"/>
+        <script src="jquery-3.6.0.min.js"></script>
+        <!-- <script src="cart.js"></script> -->
     </head>
     <body>
         <header>
@@ -22,7 +24,7 @@
         </header>
         <main>
             <p>Showing contents of products table:</p>
-            <table border="1">
+            <table border="1" id="productTable">
                 <tr>
                     <th>product_id</th>
                     <th>product_category</th>
@@ -30,6 +32,7 @@
                     <th>product_price</th>
                     <th>product_desc</th>
                     <th>product_quantity</th>
+                    <th>add to cart</th>
                 </tr>
                 <?php
                     $db_host   = '192.168.2.13';
@@ -47,6 +50,7 @@
                         echo "<td>".$row["product_price"]."</td>";
                         echo "<td>".$row["product_desc"]."</td>";
                         echo "<td>".$row["product_quantity"]."</td>";
+                        echo "<td id='addToCart'><div><button>Add</button></div></td>";
                         echo "</tr>\n";
                     }
                 ?>

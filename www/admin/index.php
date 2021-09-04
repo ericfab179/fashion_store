@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
     <head>
-        <title>HUNTER</title>
+        <title>HUNTER -> admin</title>
         <meta charset="utf-8">
         <link rel="icon" href="icon.png">
         <link rel="stylesheet" href="style.css"/>
@@ -11,17 +11,9 @@
             <a href="index.php">
                 <img src="logo.png" alt="pawhub"> 
             </a>
-            <nav>
-                <ul>
-                    <li><a href="tops.php">tops</a></li>
-                    <li><a href="bottoms.php">bottoms</a></li>
-                    <li><a href="footwear.php">footwear</a></li>
-                    <li><a href="headwear.php">headwear</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
-            <p>Showing contents of products table:</p>
+            <p>admin page</p>
             <table border="1">
                 <tr>
                     <th>product_id</th>
