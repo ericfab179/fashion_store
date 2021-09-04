@@ -21,6 +21,7 @@ var Cart = (function () {
         
         cart.push(item);
         sessionStorage.setItem('cart', JSON.stringify(cart));
+        window.location.reload();
 
     }
 

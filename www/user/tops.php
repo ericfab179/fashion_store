@@ -21,8 +21,26 @@
             </nav>
         </header>
         <main>
-            <p>Showing all tops in the products table</p>
-            <table border="1">
+            <button id="myBtn">cart</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>cart</p>
+                    <table border="1" id="cartTable" class="center">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableContent"></tbody>
+                    </table>
+                </div>
+            </div>
+            <p>tops</p>
+            <table border="1" id="productTable" class="center">
                 <tr>
                     <th>product_id</th>
                     <th>product_category</th>

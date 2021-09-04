@@ -79,7 +79,7 @@ CART POPUP
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    text-align: center;
+    /* text-align: center; */
     margin: 15% auto;
     padding: 20px;
     width: 80%;

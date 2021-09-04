@@ -29,12 +29,12 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>cart</p>
-                    <table class="table is-bordered is-striped is-hoverable is-fullwidth" id="cartTable">
+                    <table border="1" id="cartTable" class="center">
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Price</th>
-                                <th>Quantity to Purchase</th>
+                                <th>Quantity</th>
                                 <th>Total</th>
                             </tr>
                         </thead>
@@ -42,9 +42,7 @@
                     </table>
                 </div>
             </div>
-            <div id='test'>
-                <p>Showing contents of products table:</p>
-            </div>
+            <p>all items</p>
             <table border="1" id="productTable" class="center">
                 <tr>
                     <th>product_id</th>
