@@ -6,7 +6,7 @@
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="css/style.css"/>
         <script src="js/jquery-3.6.0.min.js"></script>
-        <!-- <script src="cart.js"></script> -->
+        <script src="js/cart.js"></script>
     </head>
     <body>
         <header>
@@ -23,7 +23,9 @@
             </nav>
         </header>
         <main>
-            <p>Showing contents of products table:</p>
+            <div id='test'>
+                <p>Showing contents of products table:</p>
+            </div>
             <table border="1" id="productTable">
                 <tr>
                     <th>product_id</th>

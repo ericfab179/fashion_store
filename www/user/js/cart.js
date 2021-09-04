@@ -3,9 +3,30 @@ var Cart = (function () {
 
     var pub = {};
 
-    pub.setup = function() {
+    function add() {
+        var cart;
+        var item;
 
-        $(body).append("<p>test</p>");
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+
+        if (!cart) {
+            sessionStorage.setItem('cart', "");
+            cart = [];
+        }
+
+        item = {};
+        item.name = $(this).siblings().first().next().next().text();
+        item.price = $(this).siblings().first().next().next().next().text();
+        item.quantity = $(this).siblings().first().next().next().next().next().next().text();
+        
+        cart.push(item);
+        sessionStorage.setItem('cart', JSON.stringify(cart));
+
+    }
+
+    pub.setup = function() {  
+
+        $(addToCart).click(add);
 
     };
 
