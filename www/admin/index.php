@@ -3,13 +3,13 @@
     <head>
         <title>HUNTER -> admin</title>
         <meta charset="utf-8">
-        <link rel="icon" href="icon.png">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="style/style.css"/>
     </head>
     <body>
         <header>
             <a href="index.php">
-                <img src="logo.png" alt="pawhub"> 
+                <img src="images/logo.png" alt="HUNTER"> 
             </a>
         </header>
         <main>
