@@ -1,7 +1,7 @@
 # fashion_store
-Fashion e-commerce platform making use of three virtual machines, implemented using vagrant.
+Fashion website making use of three virtual machines, implemented using vagrant.
 
-Fashion label is named after my last name: HUNTER
+Named after my last name: HUNTER
 
 ### user site
 
