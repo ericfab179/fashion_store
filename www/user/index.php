@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css"/>
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/cart.js"></script>
+        <script src="js/cartPopup.js"></script>
     </head>
     <body>
         <header>
@@ -23,10 +24,28 @@
             </nav>
         </header>
         <main>
+            <button id="myBtn">cart</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>cart</p>
+                    <table class="table is-bordered is-striped is-hoverable is-fullwidth" id="cartTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity to Purchase</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableContent"></tbody>
+                    </table>
+                </div>
+            </div>
             <div id='test'>
                 <p>Showing contents of products table:</p>
             </div>
-            <table border="1" id="productTable">
+            <table border="1" id="productTable" class="center">
                 <tr>
                     <th>product_id</th>
                     <th>product_category</th>

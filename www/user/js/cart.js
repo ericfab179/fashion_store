@@ -39,5 +39,5 @@ window.addEventListener('load', Cart.setup);
 } else if (window.attachEvent) {
 window.attachEvent('onload', Cart.setup);
 } else {
-alert("Could not attach 'Images.setup' to the 'window.onload' event");
+alert("Could not attach 'Cart.setup' to the 'window.onload' event");
 }
