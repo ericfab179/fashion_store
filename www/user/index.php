@@ -12,7 +12,7 @@
     <body>
         <header>
             <a href="index.php">
-                <img src="images/logo.png" alt="HUNTER"> 
+                <img src="images/logo.png" id="hunter"> 
             </a>
             <nav>
                 <ul>
@@ -24,8 +24,8 @@
             </nav>
         </header>
         <main>
-            <button id="myBtn">cart</button>
-            <div id="myModal" class="modal">
+            <button id="cartButton">cart</button>
+            <div id="cartModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>cart</p>
@@ -40,6 +40,24 @@
                         </thead>
                         <tbody id="tableContent"></tbody>
                     </table>
+                </div>
+            </div>
+            <div id="addToCartModal" class="modal">
+                <div class="modal-content">
+                    <span class="addToClose">&times;</span>
+                    <p>how many would you like?</p>
+                    <select id="quant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <button id="finalAdd">add to cart</button>
                 </div>
             </div>
             <p>all items</p>

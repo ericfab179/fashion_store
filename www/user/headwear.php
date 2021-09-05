@@ -21,8 +21,8 @@
             </nav>
         </header>
         <main>
-            <button id="myBtn">cart</button>
-            <div id="myModal" class="modal">
+            <button id="cartButton">cart</button>
+            <div id="cartModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>cart</p>

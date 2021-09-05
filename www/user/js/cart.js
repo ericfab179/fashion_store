@@ -7,8 +7,10 @@ var Cart = (function () {
         var cart;
         var item;
 
-        cart = JSON.parse(sessionStorage.getItem('cart'));
-
+        if (JSON.parse(sessionStorage.getItem('cart'))) {
+            cart = JSON.parse(sessionStorage.getItem('cart'));
+        }
+        
         if (!cart) {
             sessionStorage.setItem('cart', "");
             cart = [];
@@ -17,17 +19,40 @@ var Cart = (function () {
         item = {};
         item.name = $(this).siblings().first().next().next().text();
         item.price = $(this).siblings().first().next().next().next().text();
-        item.quantity = $(this).siblings().first().next().next().next().next().next().text();
         
-        cart.push(item);
-        sessionStorage.setItem('cart', JSON.stringify(cart));
-        window.location.reload();
+        
+        $(finalAdd).click(function() {
+            item.quantity = $('#quant option:selected').text();
+            cart.push(item);
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            window.location.reload();
+        });
+        
 
     }
 
     pub.setup = function() {  
 
         $(addToCart).click(add);
+
+        /*
+        Display the cart popup
+        */
+        var modal = document.getElementById("addToCartModal");
+        var span = document.getElementsByClassName("addToClose")[0];
+
+        $(addToCart).click(function() {
+            modal.style.display = "block";
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
     };
 

@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    margin: 0px;
 }
 
 main {
@@ -28,11 +29,27 @@ HEADER AND CONTENT
 */
 header {
     text-align: center;
+    /* background-image: url("../images/vhs.gif"); */
+    /* background-size: cover; */
+    height: 150px;
+    margin-top: 0px;
 }
 
-header img {
+/* #imageWrap {
+    position: relative;
+} */
+
+#hunter {
     height: 150px;
+    z-index: 10;
 }
+
+/* #nyc {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+} */
 
 nav ul {
     text-decoration: none;
@@ -86,14 +103,14 @@ CART POPUP
 }
   
 /* The Close Button */
-.close {
+.close, .addToClose {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
   
-.close:hover, .close:focus {
+.close:hover, .close:focus, .addToClose:hover, .addToClose:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;

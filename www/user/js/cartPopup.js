@@ -3,27 +3,11 @@ var Popup = (function () {
 
     var pub = {};
 
-    function updateTotal() {
-        var quantity = $(this).children("option:selected").val();
-        var price = $(this).parent().parent().siblings().first().next().text();
-        var total = quantity * price;
-        $(this).parent().parent().siblings().last().empty();
-        $(this).parent().parent().siblings().last().text(total.toFixed(2));
-    }
-
-    function quantitySelect(total) {
-        let option = "";
-        for(var i = 1; i <= total; i+=1){
-           option += "<option value=\"" + i + "\">" + i + "</option>";
-        }
-        return option;
-    }
-
     function generateCart(cart) {
         var cartTable = "";
         for (var i = 0; i < cart.length; i++) {
-            var select = quantitySelect(cart[i].quantity);
-            cartTable += "<tr id='" + i + "'><td>" + cart[i].name + "</td><td>" + cart[i].price + "</td><td><div class='select'><select class='quantSelect'>" + select + "</select></div></td><td class='totalValue'>" + cart[i].price + "</td></tr>";
+            var total = cart[i].price * cart[i].quantity;
+            cartTable += "<tr id='" + i + "'><td>" + cart[i].name + "</td><td>" + cart[i].price + "</td><td>" + cart[i].quantity + "</td><td class='totalValue'>" + total + "</td></tr>";
         }
         return cartTable;
     }
@@ -34,14 +18,13 @@ var Popup = (function () {
         if (cart) {
             cart = JSON.parse(cart);
             $(tableContent).append(generateCart(cart));
-            $(".quantSelect").change(updateTotal);
         }
 
         /*
         Display the cart popup
         */
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("myBtn");
+        var modal = document.getElementById("cartModal");
+        var btn = document.getElementById("cartButton");
         var span = document.getElementsByClassName("close")[0];
 
         btn.onclick = function() {
