@@ -4,17 +4,40 @@
         <title>HUNTER -> admin</title>
         <meta charset="utf-8">
         <link rel="icon" href="images/icon.png">
-        <link rel="stylesheet" href="style/style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/product.js"></script>
+        <!-- <script src="js/login.js"></script> -->
     </head>
     <body>
         <header>
             <a href="index.php">
-                <img src="images/logo.png" alt="HUNTER"> 
+                <img src="images/logo.png" id="hunter"> 
             </a>
         </header>
         <main>
-            <p>admin page</p>
-            <table border="1">
+            <div id="addProduct" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>add a new item</p>
+                </div>
+            </div>
+            <div id="editProduct" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>edit a item</p>
+                </div>
+            </div>
+            <div id="deleteProduct" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>delete a item</p>
+                </div>
+            </div>
+            <button id="addItem">add a new item</button>
+            <button id="deleteItem">delete an item</button>
+            <button id="editItem">edit an item</button>
+            <table border="1" id="productTable" class="center">
                 <tr>
                     <th>product_id</th>
                     <th>product_category</th>

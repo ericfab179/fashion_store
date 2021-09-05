@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS adminlogin;
+
+CREATE TABLE adminlogin(
+    admin_username varchar(10) NOT NULL,
+    admin_password varchar(10) NOT NULL,
+    PRIMARY KEY(admin_username)
+);
+
+INSERT INTO adminlogin (admin_username, admin_password) VALUES ('username', 'password');
+
 DROP TABLE IF EXISTS products;
 
 CREATE TABLE products(
