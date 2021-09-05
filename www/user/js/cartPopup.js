@@ -3,11 +3,19 @@ var Popup = (function () {
 
     var pub = {};
 
+    function total() {
+        var total = 0;
+        $('#cartTable tbody tr td:nth-child(4)').each(function(){
+            total += parseInt($(this).text(), 10);
+        });
+        return "<p>total: $" + total + "</p>";
+    }
+
     function generateCart(cart) {
         var cartTable = "";
         for (var i = 0; i < cart.length; i++) {
             var total = cart[i].price * cart[i].quantity;
-            cartTable += "<tr id='" + i + "'><td>" + cart[i].name + "</td><td>" + cart[i].price + "</td><td>" + cart[i].quantity + "</td><td class='totalValue'>" + total + "</td></tr>";
+            cartTable += "<tr id='" + i + "'><td>" + cart[i].name + "</td><td>" + cart[i].price + "</td><td>" + cart[i].quantity + "</td><td id='totalValue'>" + total + "</td></tr>";
         }
         return cartTable;
     }
@@ -18,6 +26,7 @@ var Popup = (function () {
         if (cart) {
             cart = JSON.parse(cart);
             $(tableContent).append(generateCart(cart));
+            $(".modal-content").append(total);
         } else {
             $(cartTable).replaceWith("<p>your cart is empty</p>");
         }
