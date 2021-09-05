@@ -26,7 +26,7 @@ var Popup = (function () {
         if (cart) {
             cart = JSON.parse(cart);
             $(tableContent).append(generateCart(cart));
-            $(".modal-content").append(total);
+            $(mainCart).append(total);
         } else {
             $(cartTable).replaceWith("<p>your cart is empty</p>");
         }

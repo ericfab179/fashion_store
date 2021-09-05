@@ -26,7 +26,7 @@
         <main>
             <button id="cartButton">cart</button>
             <div id="cartModal" class="modal">
-                <div class="modal-content">
+                <div class="modal-content" id="mainCart">
                     <span class="close">&times;</span>
                     <p>cart</p>
                     <table border="1" id="cartTable" class="center">
