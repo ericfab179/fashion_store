@@ -18,6 +18,8 @@ var Popup = (function () {
         if (cart) {
             cart = JSON.parse(cart);
             $(tableContent).append(generateCart(cart));
+        } else {
+            $(cartTable).replaceWith("<p>your cart is empty</p>");
         }
 
         /*
