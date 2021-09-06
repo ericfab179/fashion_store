@@ -7,8 +7,10 @@ var Cart = (function () {
         var cart;
         var item;
 
-        if (JSON.parse(sessionStorage.getItem('cart'))) {
+        try {
             cart = JSON.parse(sessionStorage.getItem('cart'));
+        } catch (error) {
+            console.error(error);
         }
         
         if (!cart) {
@@ -17,8 +19,8 @@ var Cart = (function () {
         }
 
         item = {};
-        item.name = $(this).siblings().first().next().next().text();
-        item.price = $(this).siblings().first().next().next().next().text();
+        item.name = $(this).parent().children().first().next().text();
+        item.price = $(this).parent().children().first().next().next().text();
         
         
         $(finalAdd).click(function() {
@@ -34,6 +36,9 @@ var Cart = (function () {
     pub.setup = function() {  
 
         $(addToCart).click(add);
+
+        $(pname).hide();
+        $(price).hide();
 
         /*
         Display the cart popup

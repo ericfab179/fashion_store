@@ -8,6 +8,48 @@ main {
     margin-top: 50px;
 }
 
+footer {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-top-color: black;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+/*
+-----
+BUTTON
+-----
+*/
+#cartButton {
+    width: 200px;
+    height: 50px;
+    /* border-radius: 25px; */
+    margin-bottom: 50px;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#cartButton:hover, #cartButton:focus {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#addToCart {
+    width: 100px;
+    height: 25px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
 /* 
 -----
 TABLE 
@@ -15,11 +57,30 @@ TABLE
 */
 table {
     border-collapse: collapse;
+    border: none;
+    background: #CCC
 }
 
 table.center {
     margin-left:auto; 
     margin-right:auto;
+}
+
+th {
+    background: #CCC;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+tr:nth-child(even) {
+    background: #CCC;
+}
+tr:nth-child(odd) {
+    background: #FFF;
 }
 
 /* 
@@ -31,8 +92,12 @@ header {
     text-align: center;
     /* background-image: url("../images/la.gif");
     background-size: cover; */
-    height: 150px;
+    height: 200px;
     margin-top: 0px;
+    /* box-shadow: 0 0 10px 0 black; */
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 /* #imageWrap {
@@ -114,4 +179,67 @@ CART POPUP
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*
+-----
+PRODUCT DISPLAY
+-----
+*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 25px;
+    background-color: #fff;
+    color: #444;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.box {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 350px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 200px 50px 50px 50px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+}
+
+#addToCart:hover, #addToCart:focus {
+    background-color: black;
+    color: white;
+}
+
+#productImage {
+    width: 150px;
+}
+
+/*
+-----
+ADD TO CART MODAL
+-----
+*/
+.modal-content > button {
+    width: 200px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+    margin-top: 25px;
+}
+
+.modal-content > select {
+    margin-top: 20px;
+    width: 200px;
+    height: 25px;
 }
