@@ -5,12 +5,16 @@ var Product = (function () {
 
     pub.setup = function() {  
 
+        $(pname).hide();
+        $(price).hide();
+        $(pdesc).hide();
+
         $(addItem).click(function() {
             /*
             Display the add product popup
             */
             var modal = document.getElementById("addProduct");
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("close")[2];
 
             modal.style.display = "block";
 
@@ -29,7 +33,7 @@ var Product = (function () {
             Display the edit product popup
             */
             var modal = document.getElementById("editProduct");
-            var span = document.getElementsByClassName("close")[1];
+            var span = document.getElementsByClassName("close")[0];
 
             modal.style.display = "block";
             
@@ -48,7 +52,7 @@ var Product = (function () {
             Display the delete product popup
             */
             var modal = document.getElementById("deleteProduct");
-            var span = document.getElementsByClassName("close")[2];
+            var span = document.getElementsByClassName("close")[1];
 
             modal.style.display = "block";
             
