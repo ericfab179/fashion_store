@@ -40,7 +40,7 @@
                         </thead>
                         <tbody id="tableContent"></tbody>
                     </table>
-                    <button id="editCart">edit cart</button>
+                    <div id="totalCart"></div>
                     <button id="clearCart">clear cart</button>
                     <button id="checkout">checkout</button>
                 </div>

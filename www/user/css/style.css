@@ -1,14 +1,17 @@
-body {
+body
+{
     font-family: sans-serif;
     margin: 0px;
 }
 
-main {
+main
+{
     text-align: center;
     margin-top: 50px;
 }
 
-footer {
+footer
+{
     margin-top: 100px;
     margin-bottom: 50px;
     border-top-color: black;
@@ -21,7 +24,8 @@ footer {
 BUTTON
 -----
 */
-#cartButton {
+#cartButton
+{
     width: 200px;
     height: 50px;
     /* border-radius: 25px; */
@@ -32,12 +36,15 @@ BUTTON
     border-style: solid;
 }
 
-#cartButton:hover, #cartButton:focus {
+#cartButton:hover,
+#cartButton:focus
+{
     background-color: rgb(0, 0, 0);
     color: white;
 }
 
-#addToCart {
+#addToCart
+{
     width: 100px;
     height: 25px;
     color: rgb(0, 0, 0);
@@ -55,31 +62,38 @@ BUTTON
 TABLE 
 -----
 */
-table {
+table
+{
     border-collapse: collapse;
     border: none;
     background: #CCC
 }
 
-table.center {
+table.center
+{
     margin-left:auto; 
     margin-right:auto;
 }
 
-th {
+th 
+{
     background: #CCC;
 }
 
-th, td {
+th,
+td
+{
     padding: 10px;
     text-align: left;
     border: none;
 }
 
-tr:nth-child(even) {
+tr:nth-child(even)
+{
     background: #CCC;
 }
-tr:nth-child(odd) {
+tr:nth-child(odd)
+{
     background: #FFF;
 }
 
@@ -88,97 +102,49 @@ tr:nth-child(odd) {
 HEADER AND CONTENT 
 -----
 */
-header {
+header 
+{
     text-align: center;
-    /* background-image: url("../images/la.gif");
-    background-size: cover; */
     height: 200px;
     margin-top: 0px;
-    /* box-shadow: 0 0 10px 0 black; */
     border-bottom-color: black;
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 
-/* #imageWrap {
-    position: relative;
-} */
-
-#hunter {
+#hunter 
+{
     height: 150px;
     z-index: 10;
 }
 
-/* #nyc {
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    z-index: 0;
-} */
-
-nav ul {
+nav ul
+{
     text-decoration: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+nav ul li 
+{
     display: inline;
     padding: 20px;
 }
 
-a {
+a 
+{
     color: black;
 }
 
-a:link {
-    text-decoration: none;
-  }
-  
-a:visited {
+a:link 
+{
     text-decoration: none;
 }
-
-/* 
------
-CART POPUP 
------
-*/
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
-}
   
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    /* text-align: center; */
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-}
-  
-/* The Close Button */
-.close, .addToClose {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-  
-.close:hover, .close:focus, .addToClose:hover, .addToClose:hover {
-    color: black;
+a:visited 
+{
     text-decoration: none;
-    cursor: pointer;
 }
 
 /*
@@ -186,7 +152,8 @@ CART POPUP
 PRODUCT DISPLAY
 -----
 */
-.wrapper {
+.wrapper
+{
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
     grid-gap: 25px;
@@ -196,7 +163,8 @@ PRODUCT DISPLAY
     justify-content: center;
   }
   
-.box {
+.box
+{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     height: 350px;
@@ -209,7 +177,9 @@ PRODUCT DISPLAY
     padding: 10px;
 }
 
-#addToCart:hover, #addToCart:focus {
+#addToCart:hover, 
+#addToCart:focus
+{
     background-color: black;
     color: white;
 }
@@ -218,12 +188,59 @@ PRODUCT DISPLAY
     width: 150px;
 }
 
+/* 
+-----
+MODAL
+-----
+*/
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.modal-content
+{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+}
+  
+.close,
+.addToClose
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus,
+.addToClose:hover,
+.addToClose:hover
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*
 -----
 ADD TO CART MODAL
 -----
 */
-.modal-content > button {
+.modal-content > #finalAdd
+{
     width: 200px;
     height: 50px;
     color: rgb(0, 0, 0);
@@ -238,8 +255,46 @@ ADD TO CART MODAL
     margin-top: 25px;
 }
 
-.modal-content > select {
+.modal-content > #finalAdd:hover, 
+.modal-content > #finalAdd:focus
+{
+    background-color: black;
+    color: white;
+}
+
+.modal-content > select
+{
     margin-top: 20px;
     width: 200px;
     height: 25px;
+}
+
+/*
+-----
+CART MODAL
+-----
+*/
+.modal-content > #clearCart, 
+.modal-content > #checkout
+{
+    width: 200px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: inline;
+}
+
+.modal-content > #checkout:hover, 
+.modal-content > #checkout:focus,
+.modal-content > #clearCart:hover, 
+.modal-content > #clearCart:focus 
+{
+    background-color: black;
+    color: white;
 }

@@ -20,13 +20,36 @@ var Popup = (function () {
         return cartTable;
     }
 
-    pub.setup = function() {  
+    pub.setup = function() {
 
+        /*
+        proceeds to checkout
+        checkout not handled yet
+        sends alert
+        does nothing
+        */
+       $(checkout).click(function() {
+           alert("Checkout functionality has not yet been implemented\n\nHave a great day!")
+       });
+        
+        /*
+        clears the cart when button pressed
+        */
+        $(clearCart).click(function() {
+            sessionStorage.clear();
+            window.location.reload();
+        });
+
+        /*
+        If there are any items in cart
+        display items as a table
+        with total price at bottom
+        */
         var cart = sessionStorage.getItem("cart");
         if (cart) {
             cart = JSON.parse(cart);
             $(tableContent).append(generateCart(cart));
-            $(mainCart).append(total);
+            $(totalCart).append(total);
         } else {
             $(cartTable).replaceWith("<p>your cart is empty</p>");
         }
