@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
     <head>
-        <title>HUNTER</title>
+        <title>HUNTER -> headwear</title>
         <meta charset="utf-8">
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="css/style.css"/>
@@ -40,6 +40,9 @@
                         </thead>
                         <tbody id="tableContent"></tbody>
                     </table>
+                    <div id="totalCart"></div>
+                    <button id="clearCart">clear cart</button>
+                    <button id="checkout">checkout</button>
                 </div>
             </div>
             <div id="addToCartModal" class="modal">
@@ -60,17 +63,7 @@
                     <button id="finalAdd">add to cart</button>
                 </div>
             </div>
-            <p>all items</p>
-            <table border="1" id="productTable" class="center">
-                <tr>
-                    <th>product_id</th>
-                    <th>product_category</th>
-                    <th>product_name</th>
-                    <th>product_price</th>
-                    <th>product_desc</th>
-                    <th>product_quantity</th>
-                    <th>add to cart</th>
-                </tr>
+            <div class="wrapper">
                 <?php
                     $db_host   = '192.168.2.13';
                     $db_name   = 'fvision';
@@ -80,18 +73,29 @@
                     $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
                     $q = $pdo->query("SELECT * FROM products WHERE product_category='headwear'");
                     while($row = $q->fetch()){
-                        echo "<tr>";
-                        echo "<td>".$row["product_id"]."</td>";
-                        echo "<td>".$row["product_category"]."</td>";
-                        echo "<td>".$row["product_name"]."</td>";
-                        echo "<td>".$row["product_price"]."</td>";
-                        echo "<td>".$row["product_desc"]."</td>";
-                        echo "<td>".$row["product_quantity"]."</td>";
-                        echo "<td id='addToCart'><div><button>Add</button></div></td>";
-                        echo "</tr>\n";
+                        echo "<div class='box'>";
+                        echo "<a><img src='".$row["product_imagepath"]."' id='productImage'></a>";
+                        echo "<p id='pname'>".$row["product_name"]."</p>";
+                        echo "<p id='price'>".$row["product_price"]."</p>";
+                        echo "<p>".$row["product_name"]." - $".$row["product_price"]."</p>";
+                        echo "<p>".$row["product_desc"]."</p>";
+                        echo "<button id='addToCart'>Add</button>";
+                        echo "</div>\n";
                     }
                 ?>
-            </table>
+            </div>
+            <footer>
+                <h2>about HUNTER</h2>
+                <p>HUNTER is a world leader in contemporary mens fashion</p>
+                <p>This site is the one place you need for the coming season</p>
+                <h2>about me</h2>
+                <address>
+                    <p>Angus Hunter</p>
+                    <p>Dunedin, New Zealand</p>
+                    <p>angus.hunter2001@gmail.com</p>
+                    <p>021 207 0224</p>
+                </address>
+            </footer>
         </main>
     </body>
 </html>
