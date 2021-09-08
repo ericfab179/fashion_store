@@ -7,7 +7,6 @@ var Admin = (function () {
 
         $(pname).hide();
         $(price).hide();
-        $(pdesc).hide();
 
         $(addItem).click(function() {
             /*
@@ -18,25 +17,6 @@ var Admin = (function () {
 
             modal.style.display = "block";
 
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        });
-
-        $(editItem).click(function() {
-            /*
-            Display the edit product popup
-            */
-            var modal = document.getElementById("editProduct");
-            var span = document.getElementsByClassName("close")[0];
-
-            modal.style.display = "block";
-            
             span.onclick = function() {
                 modal.style.display = "none";
             }

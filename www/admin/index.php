@@ -9,7 +9,6 @@
         <script src="js/admin.js"></script>
         <script src="js/delete.js"></script>
         <script src="js/add.js"></script>
-        <script src="js/edit.js"></script>
     </head>
     <body>
         <header>
@@ -19,12 +18,6 @@
             <p>administration</p>
         </header>
         <main>
-            <div id="editProduct" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>edit item</p>
-                </div>
-            </div>
             <div id="deleteProduct" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -96,7 +89,6 @@
                     echo "<p id='price'>".$row["product_price"]."</p>";
                     echo "<p>".$row["product_name"]." - $".$row["product_price"]."</p>";
                     echo "<p id='pdesc'>".$row["product_desc"]."</p>";
-                    echo "<button id='editItem'>edit</button>";
                     echo "<button id='deleteItem'>delete</button>";
                     echo "</div>";
                     echo "</div>\n";
