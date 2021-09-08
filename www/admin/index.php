@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
     <head>
-        <title>HUNTER</title>
+        <title>HUNTER -> admin</title>
         <meta charset="utf-8">
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="css/style.css"/>
@@ -47,6 +47,7 @@
                 $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
                 $q = $pdo->query("SELECT * FROM products");
                 while($row = $q->fetch()){
+                    echo "<div id='".$row["product_name"]."'>";
                     echo "<div class='box'>";
                     echo "<a><img src='".$row["product_imagepath"]."' id='productImage'></a>";
                     echo "<p id='pname'>".$row["product_name"]."</p>";
@@ -55,6 +56,7 @@
                     echo "<p id='pdesc'>".$row["product_desc"]."</p>";
                     echo "<button id='editItem'>edit</button>";
                     echo "<button id='deleteItem'>delete</button>";
+                    echo "</div>";
                     echo "</div>\n";
                 }
             ?>

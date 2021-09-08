@@ -3,7 +3,29 @@ var Product = (function () {
 
     var pub = {};
 
-    pub.setup = function() {  
+    var product;
+
+    function deleteProd(name) {
+        $.ajax({
+            url: './deleteProduct.php',
+            type: 'POST',
+            data: {'name' : name},
+            success: function(response) {
+                setTimeout(location.reload.bind(location), 5000);
+            }
+        });
+        window.location.reload();
+    }
+
+    pub.setup = function() {
+
+        $(deleteItem).click(function() {
+            product = $(this).parent().parent().attr('id');
+        });
+
+        $(finalDelete).click(function() {
+            deleteProd(product);
+        });
 
         $(pname).hide();
         $(price).hide();
