@@ -6,7 +6,10 @@
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="css/style.css"/>
         <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/product.js"></script>
+        <script src="js/admin.js"></script>
+        <script src="js/delete.js"></script>
+        <script src="js/add.js"></script>
+        <script src="js/edit.js"></script>
     </head>
     <body>
         <header>
