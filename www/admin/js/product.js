@@ -5,6 +5,24 @@ var Product = (function () {
 
     var product;
 
+    function addProd() {
+        var category = $(addCat).val();
+        var name = $(addName).val();
+        var description = $(addDesc).val();
+        var price = $(addPrice).val();
+        var quantity = $(addQuantity).val();
+        var image = "images/" + $(imagePath).val();
+        $.ajax({
+            type: "POST",
+            url: 'addProduct.php',
+            data: {'category' : category, 'name' : name, 'description': description, 'price': price, 'quantity': quantity, 'image' : image},
+            success: function (response) {
+                setTimeout(location.reload.bind(location), 5000);
+            }
+        });
+        window.location.reload();
+    }
+
     function deleteProd(name) {
         $.ajax({
             url: './deleteProduct.php',
@@ -18,6 +36,8 @@ var Product = (function () {
     }
 
     pub.setup = function() {
+
+        $(addFinal).click(addProd);
 
         $(deleteItem).click(function() {
             product = $(this).parent().parent().attr('id');

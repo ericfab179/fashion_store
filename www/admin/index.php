@@ -34,6 +34,45 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>add a new item</p>
+                    <form action="" method="post" id="addForm">
+                        <div class="field">
+                            <label class="label">category:</label>
+                            <p class="control">
+                                <input class="input" type="text" name="addCat" id="addCat">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">name:</label>
+                            <p class="control">
+                                <input class="input" type="text" name="addName" id="addName">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">description:</label>
+                            <p class="control">
+                                <input class="input" type="text" name="addDesc" id="addDesc">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">price:</label>
+                            <p class="control">
+                                <input class="input" type="text" name="addPrice" id="addPrice" placeholder="00.00">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">quantity in stock:</label>
+                            <p class="control">
+                                <input class="input" type="text" name="addQuantity" id="addQuantity" placeholder="0">
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">image name: (with extension)</label>
+                            <p class="control">
+                                <input class="input" type="text" name="imagePath" id="imagePath">
+                            </p>
+                        </div>
+                    </form>
+                    <button id="addFinal">add item</button>
                 </div>
             </div>
             <button id="addItem">add a new item</button>
