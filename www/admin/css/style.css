@@ -306,3 +306,63 @@ CART MODAL
     background-color: black;
     color: white;
 }
+
+/*
+-----
+DELETE PRODUCT MODEL
+-----
+*/
+.modal-content > #finalDelete,
+.modal-content > #noDelete
+{
+    width: 100px;
+    height: 25px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: inline;
+    margin-top: 25px;
+}
+
+.modal-content > #finalDelete:hover, 
+.modal-content > #finalDelete:focus,
+.modal-content > #noDelete:hover, 
+.modal-content > #noDelete:focus
+{
+    background-color: black;
+    color: white;
+}
+
+/*
+-----
+ADD PRODUCT MODEL
+-----
+*/
+.modal-content > #addFinal,
+.modal-content > #addfinal
+{
+    width: 100px;
+    height: 25px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: inline;
+    margin-top: 25px;
+}
+
+.modal-content > #addFinal:hover, 
+.modal-content > #addFinal:focus
+{
+    background-color: black;
+    color: white;
+}

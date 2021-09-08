@@ -8,12 +8,17 @@ var Admin = (function () {
         $(pname).hide();
         $(price).hide();
 
+        $(noDelete).click(function() {
+            var modal = document.getElementById("deleteProduct");
+            modal.style.display = "none";
+        });
+
         $(addItem).click(function() {
             /*
             Display the add product popup
             */
             var modal = document.getElementById("addProduct");
-            var span = document.getElementsByClassName("close")[2];
+            var span = document.getElementsByClassName("close")[1];
 
             modal.style.display = "block";
 
@@ -32,7 +37,7 @@ var Admin = (function () {
             Display the delete product popup
             */
             var modal = document.getElementById("deleteProduct");
-            var span = document.getElementsByClassName("close")[1];
+            var span = document.getElementsByClassName("close")[0];
 
             modal.style.display = "block";
             
