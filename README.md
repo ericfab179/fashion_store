@@ -1,5 +1,5 @@
 # fashion_store
-This is a repo for a fashion brand web app.  To full demonstrate its functionality and design I have constructed a fake fashion brand: HUNTER
+This is a repo for a fashion brand web app.  To fully demonstrate its functionality and design I have constructed a fake fashion brand: HUNTER
 
 The web app makes use of three virtual machines; implemented using virtualbox and vagrant.
 
