@@ -69,6 +69,7 @@
                         </div>
                     </form>
                     <button id="addFinal">add item</button>
+                    <div id="errors"></div>
                 </div>
             </div>
             <button id="addItem">add a new item</button>
