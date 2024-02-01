@@ -65,7 +65,7 @@
             </div>
             <div class="wrapper">
                 <?php
-                    $db_host   = '192.168.2.13';
+                    $db_host   = '192.168.100.13';
                     $db_name   = 'fvision';
                     $db_user   = 'webuser';
                     $db_passwd = 'insecure_db_pw';
